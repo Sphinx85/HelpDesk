@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="670946c8-ff3d-495a-bc8d-1b41dc043413" name="HelpDesk" url="jdbc:postgresql://localhost:8179/helpdesk" driverClass="org.postgresql.Driver" />
+    </data-sources>
+    <data-source-infos>
+      <data-source-info id="f430e7ce-b9c9-4aec-bc32-34a99e1288b9" persistence-unit-name="gdfg" />
+    </data-source-infos>
+  </component>
+</project>
