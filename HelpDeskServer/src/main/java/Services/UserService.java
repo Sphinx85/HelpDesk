@@ -16,19 +16,23 @@ public class UserService {
     }
 
     public void saveUser(Users user){
-        userDAO.save(user);
+        userDAO.saveUser(user);
     }
 
     public void deleteUser(Users user){
-        userDAO.delete(user);
+        userDAO.deleteUser(user);
     }
 
     public void updateUser(Users user){
-        userDAO.update(user);
+        userDAO.updateUser(user);
     }
 
     public List<Users> findAllUsers(){
         return userDAO.findAll();
+    }
+
+    public Statement findStateById(int id){
+        return userDAO.stateSearch(id);
     }
 
     public void saveStatement(Statement satement){

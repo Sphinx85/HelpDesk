@@ -1,0 +1,37 @@
+package Services;
+
+import Services.ClientHandler;
+import Services.UserRequestService;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Vector;
+
+public class Server {
+
+    private Vector<ClientHandler> clients;
+
+    public Server() {
+        clients = new Vector<>();
+        try (ServerSocket serverSocket = new ServerSocket(8888)){
+            while (true){
+                Socket socket = serverSocket.accept();
+                new ClientHandler(this, socket);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void subscribe(ClientHandler client) {
+        clients.add(client);
+    }
+
+    public Vector<ClientHandler> userList(){
+        return clients;
+    }
+}

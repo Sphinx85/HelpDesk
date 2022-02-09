@@ -1,36 +1,42 @@
 package DAO;
 
 import Entites.*;
-import Utils.HibernateSessionFactoryUtil;
+import Utils.SessionFactoryUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
 public class UserDAO {
-
+    /**
+     * Блок формирования запросов для таблицы Users:
+     * findById(); поиск пользователя по id. Входной параметр id пользователя.
+     * saveUser(); сохранение пользователя
+     * updateUser(); обновление пользователя
+     * deleteUser(); удаление пользователя
+     */
     public Users findById(int id){
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Users.class, id);
+        return SessionFactoryUtil.getSessionFactory().openSession().get(Users.class, id);
     }
 
-    public void save(Users user){
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+    public void saveUser(Users user){
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.save(user);
         transaction.commit();
         session.close();
     }
 
-    public void update(Users user){
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+    public void updateUser(Users user){
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.update(user);
         transaction.commit();
         session.close();
     }
 
-    public void delete(Users user){
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+    public void deleteUser(Users user){
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(user);
         transaction.commit();
@@ -38,20 +44,31 @@ public class UserDAO {
     }
 
     public List<Users> findAll(){
-        List<Users> users = (List<Users>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From users").list();
+        List<Users> users = (List<Users>) SessionFactoryUtil.getSessionFactory().openSession().createQuery("From users").list();
         return users;
     }
 
-    public void saveState(Statement satement) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+    /**
+     * Блок методов добавления, поиска и удаления заявок
+     */
+    public Statement stateSearch(int stateid){
+        return SessionFactoryUtil.getSessionFactory().openSession().get(Statement.class, stateid);
+
+    }
+
+    public void saveState(Statement statement) {
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        session.save(satement);
+        session.save(statement);
         transaction.commit();
         session.close();
     }
 
+    /**
+     * Блок методов флагов доступа для пользователя
+     */
     public void saveAccess(Access access) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.save(access);
         transaction.commit();
@@ -59,15 +76,18 @@ public class UserDAO {
     }
 
     public void deleteAccess(Access access) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(access);
         transaction.commit();
         session.close();
     }
 
+    /**
+     * Блок методов классификатора
+     */
     public void saveStateType(Statementtype statementtype) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.save(statementtype);
         transaction.commit();
@@ -75,15 +95,18 @@ public class UserDAO {
     }
 
     public void deleteStateType(Statementtype statementtype) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(statementtype);
         transaction.commit();
         session.close();
     }
 
+    /**
+     * Блок методов приоритета заявок
+     */
     public void savePriority(Priority priority) {
-        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.save(priority);
         transaction.commit();

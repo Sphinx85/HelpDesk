@@ -1,6 +1,10 @@
 package Entites;
 
+import Services.UserService;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -22,8 +26,8 @@ public class Users {
     @Column(name = "lastname")
     private String lastname;
 
-    //@ManyToOne(optional = false)
-    @JoinColumn(name = "access", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "access", insertable = false, updatable = false)
     private Access access;
 
     public Users() {

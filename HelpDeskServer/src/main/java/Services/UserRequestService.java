@@ -2,6 +2,7 @@ package Services;
 
 import Entites.Statement;
 import Entites.Statementtype;
+import Entites.Users;
 
 public class UserRequestService {
 
@@ -31,7 +32,12 @@ public class UserRequestService {
 
     private static String request;
     private static String[] answer;
-    private static UserService service = new UserService();
+    private static UserService service;
+
+    public UserRequestService(String message) {
+        service = new UserService();
+
+    }
 
     /**
      * Метод обработки сообщения от клиента для создания запроса в БД
@@ -39,6 +45,8 @@ public class UserRequestService {
      * @return Возвращает строковый массив, который будет использоваться для предоставления информации пользователю.
      */
     public String[] processingRequest(String message) {
+
+
 
         answer = new String[6];
         answer[0] = requestType(message);

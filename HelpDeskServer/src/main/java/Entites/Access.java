@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Access {
     @Id
     @Column(name = "flag", nullable = false)
-    private Integer id;
+    private int id;
 
 
     @Column(name = "description")
