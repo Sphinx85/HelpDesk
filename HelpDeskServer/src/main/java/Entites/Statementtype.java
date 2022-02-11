@@ -1,6 +1,8 @@
 package Entites;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "statementtype")
@@ -12,7 +14,24 @@ public class Statementtype {
     @Column(name = "description")
     private String description;
 
+    @OneToMany (mappedBy = "type")
+    private List<Statement> statementsTypes;
+
     public Statementtype() {
+    }
+
+    public Statementtype(Integer id, String description) {
+        this.id = id;
+        this.description = description;
+        statementsTypes = new ArrayList<>();
+    }
+
+    public List<Statement> getStatementsTypes() {
+        return statementsTypes;
+    }
+
+    public void setStatementsTypes(List<Statement> statementsTypes) {
+        this.statementsTypes = statementsTypes;
     }
 
     public String getDescription() {

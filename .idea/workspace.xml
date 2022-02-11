@@ -4,20 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/ClientHandler.java" afterDir="false" />
+    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="New commit for control">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDesk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDesk.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskClient/HelpDeskClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskClient/HelpDeskClient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/HelpDeskServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/HelpDeskServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Access.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Access.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Priority.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Statement.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Statement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Statementtype.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Statementtype.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Utils/HibernateSessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Utils/SessionFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Utils/SessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Utils/SessionFactoryUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +49,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
@@ -61,7 +64,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../InventoryDesktop" />
     <property name="settings.editor.selected.configurable" value="com.haulmont.jpb.ui.settings.db.FlywayConfigurable" />
   </component>
@@ -88,6 +90,14 @@
       <option name="presentableId" value="Default" />
       <updated>1643901130339</updated>
     </task>
+    <task id="LOCAL-00001" summary="New commit for control">
+      <created>1644413020309</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644413020309</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,6 +1,8 @@
 package Entites;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "priority")
@@ -13,7 +15,23 @@ public class Priority {
     @Column(name = "description", nullable = false)
     private String description;
 
+    @OneToMany (mappedBy = "priority")
+    private List<Statement> statementsPriority;
+
     public Priority() {
+    }
+
+    public Priority(String description) {
+        this.description = description;
+        statementsPriority = new ArrayList<>();
+    }
+
+    public List<Statement> getStatementsPriority() {
+        return statementsPriority;
+    }
+
+    public void setStatementsPriority(List<Statement> statementsPriority) {
+        this.statementsPriority = statementsPriority;
     }
 
     public String getDescription() {

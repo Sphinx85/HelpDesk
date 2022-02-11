@@ -2,8 +2,6 @@ package Services;
 
 import DAO.UserDAO;
 import Entites.*;
-
-
 import java.util.List;
 
 public class UserService {
@@ -13,6 +11,14 @@ public class UserService {
 
     public Users findUser(int id){
         return userDAO.findById(id);
+    }
+
+    public Statementtype findStateType(int id){
+        return userDAO.findStateType(id);
+    }
+
+    public Priority findPriority(int id){
+        return userDAO.findPriority(id);
     }
 
     public void saveUser(Users user){

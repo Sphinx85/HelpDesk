@@ -44,7 +44,7 @@ public class UserDAO {
     }
 
     public List<Users> findAll(){
-        List<Users> users = (List<Users>) SessionFactoryUtil.getSessionFactory().openSession().createQuery("From users").list();
+        List<Users> users = (List<Users>) SessionFactoryUtil.getSessionFactory().openSession().createQuery("FROM users").list();
         return users;
     }
 
@@ -54,6 +54,10 @@ public class UserDAO {
     public Statement stateSearch(int stateid){
         return SessionFactoryUtil.getSessionFactory().openSession().get(Statement.class, stateid);
 
+    }
+
+    public Statementtype findStateType(int id){
+        return SessionFactoryUtil.getSessionFactory().openSession().get(Statementtype.class, id);
     }
 
     public void saveState(Statement statement) {
@@ -111,5 +115,9 @@ public class UserDAO {
         session.save(priority);
         transaction.commit();
         session.close();
+    }
+
+    public Priority findPriority(int id){
+        return SessionFactoryUtil.getSessionFactory().openSession().get(Priority.class, id);
     }
 }
