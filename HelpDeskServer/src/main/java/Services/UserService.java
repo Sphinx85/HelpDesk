@@ -64,4 +64,12 @@ public class UserService {
     public void savePriority(Priority priority){
         userDAO.savePriority(priority);
     }
+
+    public List findStatesByQuery(String query) {
+        return userDAO.findStateByQuery(query);
+    }
+
+    public void deleteStatementByID(String id) {
+        userDAO.delteStatement(userDAO.stateSearch(Integer.parseInt(id)));
+    }
 }

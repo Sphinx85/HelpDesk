@@ -120,4 +120,16 @@ public class UserDAO {
     public Priority findPriority(int id){
         return SessionFactoryUtil.getSessionFactory().openSession().get(Priority.class, id);
     }
+
+    public List<Statement> findStateByQuery(String query) {
+        return (List<Statement>) SessionFactoryUtil.getSessionFactory().openSession().createQuery(query).list();
+    }
+
+    public void delteStatement(Statement statement) {
+        Session session = SessionFactoryUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(statement);
+        transaction.commit();
+        session.close();
+    }
 }

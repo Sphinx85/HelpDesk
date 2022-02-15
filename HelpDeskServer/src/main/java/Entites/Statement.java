@@ -39,12 +39,12 @@ public class Statement {
     public Statement() {
     }
 
-    public Statement(String description) {
+    public Statement(String description, int user_id, int type_id, int priority_id) {
         UserService service = new UserService();
         this.description = description;
-        this.user_id = 6;
-        this.type_id = 570;
-        this.priority_id = 1;
+        this.user_id = user_id;
+        this.type_id = type_id;
+        this.priority_id = priority_id;
         this.users = service.findUser(user_id);
         this.type = service.findStateType(type_id);
         this.priority = service.findPriority(priority_id);

@@ -10,6 +10,11 @@ public class ClientHandler {
     private Socket socket;
     private DataInputStream inputStream;
     private DataOutputStream outputStream;
+    private static final SwitchService switchService = new SwitchService();
+    private int userID;
+    private UserService service;
+    private int typeID;
+    private int priorityID;
 
     public ClientHandler(Server server, Socket socket){
         try{
@@ -17,18 +22,48 @@ public class ClientHandler {
             this.socket = socket;
             this.inputStream = new DataInputStream(socket.getInputStream());
             this.outputStream = new DataOutputStream(socket.getOutputStream());
+            this.service = new UserService();
+            this.userID = service.findUser(6).getId();
+            this.typeID = service.findStateType(570).getId();
+            this.priorityID = service.findPriority(1).getId();
 
-            while (true){
-                server.subscribe(this);
-                String message = inputStream.readUTF();
-                if (message.startsWith("/request ")){
-                    String[] tokens = message.split("\\s",2);
-                    new UserRequestService(tokens[1]);
+            new Thread(() ->{
+
+                while (true){
+                    server.subscribe(this);
+                    break;
                 }
-            }
+
+                while (true){
+                    try{
+
+                        String message = inputStream.readUTF();
+
+                        if (message.startsWith("/")){
+                            outputStream.writeUTF(switchService.userRequestSwitcher(message,this));
+                        }
+                    } catch (IOException e){
+                        e.printStackTrace();
+                    }
+
+                }
+            });
+
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public int getTypeID() {
+        return typeID;
+    }
+
+    public int getPriorityID() {
+        return priorityID;
     }
 }
