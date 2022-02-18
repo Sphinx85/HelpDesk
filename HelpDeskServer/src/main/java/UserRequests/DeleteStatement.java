@@ -1,9 +1,9 @@
 package UserRequests;
 
-public class EditStatement extends UserRequest{
+public class DeleteStatement extends UserRequest{
 
 
-    public EditStatement(String message) {
+    public DeleteStatement(String message) {
         super(message);
     }
 

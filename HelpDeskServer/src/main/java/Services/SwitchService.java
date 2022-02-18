@@ -1,7 +1,8 @@
 package Services;
 
-import Entites.Statement;
-import UserRequests.EditStatement;
+import AdminRequests.*;
+import Entites.*;
+import UserRequests.DeleteStatement;
 import UserRequests.NewStatement;
 import UserRequests.ReadStatement;
 
@@ -57,8 +58,165 @@ public class SwitchService {
              * Кейс отрабатывает удаление заявки пользователя.
              */
             case "/edistate":{
-                EditStatement editStatement = new EditStatement(message);
-                return (String) editStatement.request(message);
+                DeleteStatement deleteStatement = new DeleteStatement(message);
+                return (String) deleteStatement.request(message);
+            }
+        }
+        return "";
+    }
+
+    /**
+     * Метод обработки запросов от администратора.
+     * @param message Входящее сообщение из сети
+     * @return Возвращает маркерное сообщение клиенту
+     */
+    public String adminRequestSwitcher(String message) {
+        switch (message.substring(0,8)){
+            /**
+             * Запрос на добавление доступа
+             */
+            case "/admNewA":{
+                new AddAccess(message);
+                return "/newAccessOk";
+            }
+            /**
+             * Запрос на добавление приоритета
+             */
+            case "/admNewP":{
+                new AddPriority(message);
+                return "newPriorityOk";
+            }
+            /**
+             * Запрос на добавление классификатора
+             */
+            case "/admNewC":{
+                new AddClassificator(message);
+                return "/newClassificatorOk";
+            }
+            /**
+             * Запрос на добавление пользователя
+             */
+            case "/admNewU":{
+                AddUser addUser = new AddUser(message);
+                StringBuilder builder = new StringBuilder();
+                builder.append("/newUserOk ");
+                builder.append((String) addUser.request(message));
+                return builder.toString();
+            }
+            /**
+             * Запрос на список прав доступа
+             */
+            case "/admReaA":{
+                ReadAccess readAccess = new ReadAccess(message);
+                List<Access> accessList = (List<Access>) readAccess.request(message);
+                StringBuilder builder = new StringBuilder();
+                builder.append("/accessList ");
+                for (Access access: accessList){
+                    builder.append(access.getId().toString()).append(" ").append(access.getDescription()).append("//| ");
+                }
+                return builder.toString();
+            }
+            /**
+             * Запрос на список приоритетов
+             */
+            case "/admReaP":{
+                ReadPriority readPriority = new ReadPriority(message);
+                List<Priority> priorityList = (List<Priority>) readPriority.request(message);
+                StringBuilder builder = new StringBuilder();
+                builder.append("/priorityList ");
+                for (Priority priority: priorityList){
+                    builder.append(priority.getId().toString()).append(" ").append(priority.getDescription()).append("//| ");
+                }
+                return builder.toString();
+            }
+            /**
+             * Запрос на список типов заявок (классификатор)
+             */
+            case "/admReaC":{
+                ReadClassificator readClassificator = new ReadClassificator(message);
+                List<Statementtype> statementTypeList = (List<Statementtype>) readClassificator.request(message);
+                StringBuilder builder = new StringBuilder();
+                builder.append("/typesList ");
+                for (Statementtype type: statementTypeList){
+                    builder.append(type.getId().toString()).append(" ").append(type.getDescription()).append("//| ");
+                }
+                return builder.toString();
+            }
+            /**
+             * Запрос списка пользователей
+             */
+            case "/admReaU":{
+                ReadUser readUser = new ReadUser(message);
+                List<Users> userList = (List<Users>) readUser.request(message);
+                StringBuilder builder = new StringBuilder();
+                builder.append("/userList ");
+                for (Users user: userList){
+                    builder.append(user.getFirstname()).append(" ").append(user.getSecondname()).append(" ").append(user.getLastname()).append("//| ");
+                }
+                return builder.toString();
+            }
+            /**
+             * Запрос на удаление доступа
+             */
+            case "/admDelA":{
+                new DeleteAccess(message);
+                return "/accessDeleted";
+            }
+            /**
+             * Запрос на удаление классификатора
+             */
+            case "/admDelC":{
+                new DeleteClassificator(message);
+                return "/typeDeleted";
+            }
+            /**
+             * Запрос на удаление приоритета
+             */
+            case "/admDelP":{
+                new DeletePriority(message);
+                return "/priorityDeleted";
+            }
+            /**
+             * Запрос на удаление пользователя
+             */
+            case "/admDelU":{
+                new DeleteUser(message);
+                return "/userDeleted";
+            }
+            /**
+             * Запрос на изменение доступа
+             */
+            case "/admEdiA":{
+                new EditAccess(message);
+                return "/accessEdited";
+            }
+            /**
+             * Запрос на изменение классификатора
+             */
+            case "/admEdiC":{
+                new EditClassificator(message);
+                return "/typeEdited";
+            }
+            /**
+             * Запрос на изменение приоритета
+             */
+            case "/admEdiP":{
+                new EditPriority(message);
+                return "/priorityEdited";
+            }
+            /**
+             * Запрос на изменение заявки
+             */
+            case "/admEdiS":{
+                new EditStatement(message);
+                return "/stateEdited";
+            }
+            /**
+             * Запрос на изменение пользователя
+             */
+            case "/admEdiU":{
+                new EditUser(message);
+                return "/userEdited";
             }
         }
         return "";

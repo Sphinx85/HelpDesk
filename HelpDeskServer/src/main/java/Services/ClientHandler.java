@@ -36,18 +36,20 @@ public class ClientHandler {
 
                 while (true){
                     try{
-
                         String message = inputStream.readUTF();
-
                         if (message.startsWith("/")){
+                            if (message.startsWith("/adm")){
+                                outputStream.writeUTF(switchService.adminRequestSwitcher(message));
+                                continue;
+                            }
                             outputStream.writeUTF(switchService.userRequestSwitcher(message,this));
                         }
                     } catch (IOException e){
                         e.printStackTrace();
                     }
-
                 }
-            });
+
+            }).start();
 
 
         } catch (IOException e) {

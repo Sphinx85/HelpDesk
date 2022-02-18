@@ -1,13 +1,13 @@
-package UserRequests;
+package AdminRequests;
 
 import Services.UserService;
 
-public abstract class UserRequest {
+public abstract class AdminRequest {
+
     protected UserService service;
 
-    protected UserRequest(String message) {
+    protected AdminRequest(String message) {
         this.service = new UserService();
-
         request(message);
     }
 

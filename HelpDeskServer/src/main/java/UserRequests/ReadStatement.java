@@ -17,7 +17,7 @@ public class ReadStatement extends UserRequest {
      * Данный класс формирует два результата запроса:
      * Для получения информации о конкретной заявке, все части сообщения должны быть заполнены
      * Для получения списка заявок, отправленных пользователем, state_id должно быть равно 0
-     * @param message
+     * @param message Входящее сообщение
      */
     @Override
     public Object request(String message) {

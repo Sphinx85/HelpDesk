@@ -35,10 +35,11 @@ public class Users {
     public Users() {
     }
 
-    public Users(String firstname, String secondname, String lastname){
+    public Users(String firstname, String secondname, String lastname, int flag){
         this.firstname = firstname;
         this.secondname = secondname;
         this.lastname = lastname;
+        this.access_id = flag;
         userStatements = new ArrayList<>();
     }
 
