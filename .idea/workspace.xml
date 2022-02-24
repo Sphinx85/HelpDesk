@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="Реализовано в серверной части:&#10;Идентификация клиента в обработчике клиента&#10;Идентификация типа заявки в обработчике клиента задана по умолчанию (прочее)&#10;Идентификация приоритета в обработчике клиента задана по умолчанию (обычный)&#10;Переделаны пользовательские запросы&#10;Интеллектуальный классификатор заявок (возможно нужна доработка)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Server.java" afterDir="false" />
+    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="Реализовано в серверной части:&#10;Доработан Сервер и Обработчик клиента в сервисах">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645682100421</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Реализовано в серверной части:&#10;Доработан Сервер и Обработчик клиента в сервисах">
+      <created>1645683460007</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645683460007</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +211,7 @@
     <MESSAGE value="Реализовано в серверной части:&#10;Создание заявки&#10;Просмотр списка, либо одной заявки&#10;Редактирование (для пользователя только удаление) заявки&#10;Родитель классов обработчиков доработан&#10;Классификатор запросов доработан. Отправляет сообщение в клиентскую часть." />
     <MESSAGE value="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов." />
     <MESSAGE value="Реализовано в серверной части:&#10;Идентификация клиента в обработчике клиента&#10;Идентификация типа заявки в обработчике клиента задана по умолчанию (прочее)&#10;Идентификация приоритета в обработчике клиента задана по умолчанию (обычный)&#10;Переделаны пользовательские запросы&#10;Интеллектуальный классификатор заявок (возможно нужна доработка)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовано в серверной части:&#10;Идентификация клиента в обработчике клиента&#10;Идентификация типа заявки в обработчике клиента задана по умолчанию (прочее)&#10;Идентификация приоритета в обработчике клиента задана по умолчанию (обычный)&#10;Переделаны пользовательские запросы&#10;Интеллектуальный классификатор заявок (возможно нужна доработка)" />
+    <MESSAGE value="Реализовано в серверной части:&#10;Доработан Сервер и Обработчик клиента в сервисах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано в серверной части:&#10;Доработан Сервер и Обработчик клиента в сервисах" />
   </component>
 </project>
