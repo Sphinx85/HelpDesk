@@ -218,4 +218,9 @@ public class UserDAO implements DAO{
         List<Users> users = (List<Users>) SessionFactoryUtil.getSessionFactory().openSession().createQuery("SELECT firstname, secondname, lastname FROM users").list();
         return users;
     }
+
+    @Override
+    public Users findUserByLogIn(String query) {
+        return (Users) SessionFactoryUtil.getSessionFactory().openSession().createQuery("SELECT id, firstname, secondname, lastname, access FROM users WHERE firstname = '" + query + "'");
+    }
 }

@@ -4,59 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="Реализовано в серверной части:&#10;Создание заявки&#10;Просмотр списка, либо одной заявки&#10;Редактирование (для пользователя только удаление) заявки&#10;Родитель классов обработчиков доработан&#10;Классификатор запросов доработан. Отправляет сообщение в клиентскую часть.">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/AddAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/AddClassificator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/AddPriority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/AddUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/AdminRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/DeleteAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/DeleteClassificator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/DeletePriority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/DeleteUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/EditAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/EditClassificator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/EditPriority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/EditStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/EditUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/ReadAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/ReadClassificator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/ReadPriority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/AdminRequests/ReadUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/DAO.java" afterDir="false" />
+    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов.">
+      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Authentication/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Authentication/LogInService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Classificator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDesk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDesk.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskClient/HelpDeskClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskClient/HelpDeskClient.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/HelpDeskServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/HelpDeskServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Entites/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/SwitchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/SwitchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/EditStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/DeleteStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/NewStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/NewStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/ReadStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/ReadStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +26,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -220,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644905234700</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов.">
+      <created>1645168325572</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645168325572</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +205,7 @@
     <MESSAGE value="New commit for control" />
     <MESSAGE value="Доведены сущности. Переписаны зависимости. Данные в базу записываются корректно." />
     <MESSAGE value="Реализовано в серверной части:&#10;Создание заявки&#10;Просмотр списка, либо одной заявки&#10;Редактирование (для пользователя только удаление) заявки&#10;Родитель классов обработчиков доработан&#10;Классификатор запросов доработан. Отправляет сообщение в клиентскую часть." />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовано в серверной части:&#10;Создание заявки&#10;Просмотр списка, либо одной заявки&#10;Редактирование (для пользователя только удаление) заявки&#10;Родитель классов обработчиков доработан&#10;Классификатор запросов доработан. Отправляет сообщение в клиентскую часть." />
+    <MESSAGE value="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов." />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов." />
   </component>
 </project>

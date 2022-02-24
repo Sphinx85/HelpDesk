@@ -48,6 +48,10 @@ public class UserService {
         userDAO.updatePriority(priority);
     }
 
+    public List<Priority> findPriorityByQuery(String query) {
+        return userDAO.findPriorityByQuery(query);
+    }
+
     public void savePriority(Priority priority){
         userDAO.savePriority(priority);
     }
@@ -128,7 +132,7 @@ public class UserService {
         return userDAO.findAll();
     }
 
-    public List<Priority> findPriorityByQuery(String query) {
-        return userDAO.findPriorityByQuery(query);
+    public Users findUserByLogIn(String query) {
+        return userDAO.findUserByLogIn(query);
     }
 }

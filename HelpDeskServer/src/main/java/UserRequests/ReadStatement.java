@@ -1,6 +1,5 @@
 package UserRequests;
 
-import Entites.Statement;
 import Services.ClientHandler;
 
 public class ReadStatement extends UserRequest {
@@ -22,8 +21,6 @@ public class ReadStatement extends UserRequest {
     @Override
     public Object request(String message) {
         String[] tokens = message.split("\\s");
-        Statement statement = new Statement("", client.getUserID(), client.getTypeID(),client.getPriorityID());
-        statement.setDescription(service.findStateById(Integer.parseInt(tokens[1])).getDescription());
 
         if (tokens[1].equals("0")){
             /**
@@ -34,7 +31,7 @@ public class ReadStatement extends UserRequest {
             /**
              * Метод, возвращающий информацию о заявке
              */
-            return statement;
+            return service.findStateById(Integer.parseInt(tokens[1]));
         }
     }
 }

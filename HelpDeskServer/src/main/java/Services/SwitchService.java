@@ -58,8 +58,8 @@ public class SwitchService {
              * Кейс отрабатывает удаление заявки пользователя.
              */
             case "/edistate":{
-                DeleteStatement deleteStatement = new DeleteStatement(message);
-                return (String) deleteStatement.request(message);
+                new DeleteStatement(message);
+                return "/stateDeleted";
             }
         }
         return "";

@@ -45,5 +45,6 @@ public interface DAO {
     void saveUser(Users user);
     void updateUser(Users user);
     void deleteUser(Users user);
+    Users findUserByLogIn(String query);
     List<Users> findAll();
 }

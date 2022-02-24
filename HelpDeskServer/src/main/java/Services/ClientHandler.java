@@ -1,5 +1,8 @@
 package Services;
 
+import Authentication.LogInService;
+import Entites.Users;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -23,15 +26,27 @@ public class ClientHandler {
             this.inputStream = new DataInputStream(socket.getInputStream());
             this.outputStream = new DataOutputStream(socket.getOutputStream());
             this.service = new UserService();
-            this.userID = service.findUser(6).getId();
-            this.typeID = service.findStateType(570).getId();
-            this.priorityID = service.findPriority(1).getId();
+            //this.userID = service.findUser(6).getId(); Временный комментарий. Старая разработка
+            this.typeID = 570;
+            this.priorityID = 1;
 
             new Thread(() ->{
 
                 while (true){
-                    server.subscribe(this);
-                    break;
+                    try {
+                        String message = inputStream.readUTF();
+                        if (message.startsWith("/auth")){
+                            LogInService inService = new LogInService();
+                            Users thisUser = inService.logIn(message);
+                            this.userID = thisUser.getId();
+                            if (userID > 0){
+                                server.subscribe(this);
+                                break;
+                            }
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
 
                 while (true){
