@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов.">
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Authentication/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Authentication/LogInService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Classificator.java" afterDir="false" />
+    <list default="true" id="363c371a-af33-481f-ba43-c59aec01122a" name="Changes" comment="Реализовано в серверной части:&#10;Идентификация клиента в обработчике клиента&#10;Идентификация типа заявки в обработчике клиента задана по умолчанию (прочее)&#10;Идентификация приоритета в обработчике клиента задана по умолчанию (обычный)&#10;Переделаны пользовательские запросы&#10;Интеллектуальный классификатор заявок (возможно нужна доработка)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/DAO/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/SwitchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/SwitchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/NewStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/NewStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/ReadStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/UserRequests/ReadStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/HelpDeskServer/src/main/java/Services/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +78,7 @@
       <recent name="AdminRequests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SwitchServiceTest">
+  <component name="RunManager" selected="Application.MainClass">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainClass" />
       <module name="HelpDeskServer" />
@@ -142,10 +134,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainClass" />
         <item itemvalue="JUnit.SwitchServiceTest" />
         <item itemvalue="JUnit.SwitchServiceTest.adminRequestSwitcher" />
         <item itemvalue="JUnit.ReadPriorityTest" />
-        <item itemvalue="Application.MainClass" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645168325572</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Реализовано в серверной части:&#10;Идентификация клиента в обработчике клиента&#10;Идентификация типа заявки в обработчике клиента задана по умолчанию (прочее)&#10;Идентификация приоритета в обработчике клиента задана по умолчанию (обычный)&#10;Переделаны пользовательские запросы&#10;Интеллектуальный классификатор заявок (возможно нужна доработка)">
+      <created>1645682100420</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1645682100421</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +205,7 @@
     <MESSAGE value="Доведены сущности. Переписаны зависимости. Данные в базу записываются корректно." />
     <MESSAGE value="Реализовано в серверной части:&#10;Создание заявки&#10;Просмотр списка, либо одной заявки&#10;Редактирование (для пользователя только удаление) заявки&#10;Родитель классов обработчиков доработан&#10;Классификатор запросов доработан. Отправляет сообщение в клиентскую часть." />
     <MESSAGE value="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов." />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовано в серверной части:&#10;Администраторские запросы&#10;Редактирование, удаление, создание всех объектов." />
+    <MESSAGE value="Реализовано в серверной части:&#10;Идентификация клиента в обработчике клиента&#10;Идентификация типа заявки в обработчике клиента задана по умолчанию (прочее)&#10;Идентификация приоритета в обработчике клиента задана по умолчанию (обычный)&#10;Переделаны пользовательские запросы&#10;Интеллектуальный классификатор заявок (возможно нужна доработка)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано в серверной части:&#10;Идентификация клиента в обработчике клиента&#10;Идентификация типа заявки в обработчике клиента задана по умолчанию (прочее)&#10;Идентификация приоритета в обработчике клиента задана по умолчанию (обычный)&#10;Переделаны пользовательские запросы&#10;Интеллектуальный классификатор заявок (возможно нужна доработка)" />
   </component>
 </project>

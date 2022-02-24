@@ -7,7 +7,7 @@ import java.util.Vector;
 
 public class Server {
 
-    private Vector<ClientHandler> clients;
+    private final Vector<ClientHandler> clients;
 
     public Server() {
         clients = new Vector<>();
@@ -24,6 +24,10 @@ public class Server {
 
     public void subscribe(ClientHandler client) {
         clients.add(client);
+    }
+
+    public void unsubscribe(ClientHandler client){
+        clients.remove(client);
     }
 
     public Vector<ClientHandler> userList(){

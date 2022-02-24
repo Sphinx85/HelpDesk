@@ -31,7 +31,9 @@ public class ClientHandler {
             this.priorityID = 1;
 
             new Thread(() ->{
-
+                /**
+                 * Цикл аутентификации
+                 */
                 while (true){
                     try {
                         String message = inputStream.readUTF();
@@ -48,7 +50,9 @@ public class ClientHandler {
                         e.printStackTrace();
                     }
                 }
-
+                /**
+                 * Цикл взаимодействия с клиентом
+                 */
                 while (true){
                     try{
                         String message = inputStream.readUTF();
@@ -61,15 +65,28 @@ public class ClientHandler {
                         }
                     } catch (IOException e){
                         e.printStackTrace();
+                    } finally {
+                        disconnect();
                     }
                 }
-
             }).start();
-
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void disconnect() {
+        server.unsubscribe(this);
+
+        try {
+            inputStream.close();
+            outputStream.close();
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public int getUserID() {
